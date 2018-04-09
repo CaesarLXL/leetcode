@@ -63,6 +63,6 @@ int main(void){
     for (int i = 0; i < output.size(); ++i){
     	cout << output[i] << endl;
     }
-    return 0;;
+    return 0;
 }
 
