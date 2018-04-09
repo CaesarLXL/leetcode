@@ -64,6 +64,5 @@ int main(void){
     	cout << output[i] << endl;
     }
     return 0;
-	
 }
 
