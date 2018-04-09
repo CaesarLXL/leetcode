@@ -1,0 +1,2 @@
+# leetcode
+leetcode C++ solution
