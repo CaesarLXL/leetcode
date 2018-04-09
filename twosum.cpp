@@ -53,7 +53,7 @@ vector<int> Solution::twoSum(vector<int>& nums, int target){
 }
 
 int main(void){
-	int in[] = { 3, 2, 4 };
+    int in[] = { 3, 2, 4 };
     vector<int> input(in, in + 3);
     Solution s;
     vector<int> output = s.twoSum(input, 6); 
