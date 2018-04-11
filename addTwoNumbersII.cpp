@@ -138,7 +138,7 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
 		ls.push(carry);
 	}
 	ListNode* list = new ListNode(0);
-	ListNOde* curr = list;
+	ListNode* curr = list;
 	while (!ls.empty()) {
 		curr->next = new ListNode(ls.top());
 		ls.pop();
