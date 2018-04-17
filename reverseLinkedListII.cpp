@@ -51,7 +51,7 @@ class Solution {
       ListNode* p = ph;
       ListNode* q = NULL;
       ListNode* t = NULL;
-      for (int i = 1; i < n; ++i) {
+      for (int i = 0; i < n; ++i) {
           if (i < m - 1) {
               p = p->next;
           } else if (i == m - 1) {
