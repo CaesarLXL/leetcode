@@ -42,30 +42,35 @@ class Solution {
           ListNode* reverseBetween(ListNode* head, int m, int n);
   };
 
-  ListNode* Solution::reverseBetween(ListNode* head, int m, int n) {
-      if (head->next == NULL) {
-          return head;
-      }
-      ListNode* ph = new ListNode(-1);
-      ph->next = head;
-      ListNode* p = ph;
-      ListNode* q = NULL;
-      ListNode* t = NULL;
-      for (int i = 0; i < n; ++i) {
-          if (i < m - 1) {
-              p = p->next;
-          } else if (i == m - 1) {
-              q = p->next;
-              t = q->next;
-          } else {
-              q->next = t->next;
-              t->next = p->next;
-              p->next = t;
-              t = q->next;
-          }
-      }
-      return ph->next;
-  }
+/*
+*method(1)-验证通过 
+*时间复杂度O(n)
+*空间复杂度O(n) 
+*/
+ListNode* Solution::reverseBetween(ListNode* head, int m, int n) {
+    if (head->next == NULL) {
+        return head;
+    }
+    ListNode* ph = new ListNode(-1);
+    ph->next = head;
+    ListNode* p = ph;
+    ListNode* q = NULL;
+    ListNode* t = NULL;
+    for (int i = 0; i < n; ++i) {
+        if (i < m - 1) {
+            p = p->next;
+        } else if (i == m - 1) {
+            q = p->next;
+            t = q->next;
+        } else {
+            q->next = t->next;
+            t->next = p->next;
+            p->next = t;
+            t = q->next;
+        }
+    }
+        return ph->next;
+}
   
 /*
  * 
